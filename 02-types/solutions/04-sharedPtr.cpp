@@ -8,16 +8,16 @@
 
 void foo(std::shared_ptr<int> ptr) {
     *ptr = 20;
-    std::cout << "num: " << *ptr << " | owners: " << ptr.use_count() << "\n";
+    std::cout << "num: " << *ptr << " | Number of owners: " << ptr.use_count() << "\n";
 }
 
 int main() {
     std::shared_ptr<int> number = std::make_shared<int>(10);
     // display the value under number pointer and use_count() of it
-    std::cout << "num: " << *number << " | owners: " << number.use_count() << "\n";
+    std::cout << "num: " << *number << " | Number of owners: " << number.use_count() << "\n";
     foo(number);
     // display the value under number pointer and use_count() of it
-    std::cout << "num: " << *number << " | owners: " << number.use_count() << "\n";
+    std::cout << "num: " << *number << " | Number of owners: " << number.use_count() << "\n";
 
     return 0;
 }

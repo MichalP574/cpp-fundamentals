@@ -5,7 +5,7 @@
 // bar() should modify value under passed pointer to 20
 // Can we have a pointer to const or a const pointer?
 
-void foo(int* ptr) {
+void foo(int* const ptr) {
     *ptr = 10;
 }
 
@@ -15,7 +15,7 @@ void bar(int* ptr) {
 
 int main() {
     int number = 5;
-    int* const pointer = &number;
+    int* pointer = &number;
     std::cout << number << '\n';
     foo(&number);
     std::cout << number << '\n';
