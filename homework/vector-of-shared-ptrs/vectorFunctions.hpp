@@ -5,8 +5,10 @@
 #include <algorithm>
 #include <memory>
 
-std::vector<std::shared_ptr<int>> generate(const int &);
-void print(const std::vector<std::shared_ptr<int>>);
-void add10(const std::vector<std::shared_ptr<int>>);
+using shared_pointers = std::vector<std::shared_ptr<int>>;
+
+shared_pointers generate(const int &);
+void print(const shared_pointers);
+void add10(const shared_pointers);
 void sub10(int* const);
-void sub10(const std::vector<std::shared_ptr<int>>);
+void sub10(const shared_pointers);
