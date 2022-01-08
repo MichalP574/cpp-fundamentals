@@ -1,5 +1,4 @@
 #include "vectorFunctions.hpp"
-
 #include <algorithm>
 #include <iostream>
 #include <memory>
